@@ -16,7 +16,7 @@ pipeline {
     }
     stage('build') {
       agent { docker { image 'nginx' }}
-       
+        
       }
     
     stage('Docker Image') {
@@ -26,8 +26,9 @@ pipeline {
     }
     stage('RUN Image / Container Creation'){
       steps{
-        sh 'docker run -p 2375:2375 -d --name contaiber site'
+        sh 'docker run -p 50000:5000 -d --name sitecont site'
       }
     }   
     
   }
+}
