@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>ML</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Lucas Silva">
+    <meta name="description" content="Projeto FPSO">
+    <meta name="keywords" content="FPSO, Machine Learning">
+    <link href="css.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="../site.js" rel="script">
+
+</head>
+<body >
+     <header style="column-count: 2" >
+
+
+                         <h1 style="text-align: center" > <strong>FPDA  </strong></h1>
+                    <p> Um projeto Petrobras em parceria com o FriendsLab UFF</p>
+
+                <img  src="img/lPetro_G.png"  alt="logo petrobras"  width="200" height="150" >
+
+        </header>
+
+
+
+              <div class="topnav" id="myTopnav">
+  <a href="h.html" class="active">Home</a>
+  <a href=estado.html>Documentação </a>
+       
+      <div class="dropdown">
+    <button class="dropbtn" style="font-size: 16px;font-family:Comic Sans MS">Back-End
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+                             <a href="modulos.html">Módulos</a>
+                              <a href="casob.html">casos de uso</a>
+                              <a href="dcb.html">diagrama de classe</a>
+                              <a href="dsb.html">diagrama de sequência</a>
+    </div>
+  </div>
+  
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+</div>
+
+<main>
+    <h2>Módulo de Manipulação de dados</h2>
+
+    <p>Este é um componente de apoio ao processo de desenvolvimento do Projeto FPDA no período
+de maio de 2021 à maio de 2023, o qual foi desenvolvido para extração de documentos de código python.</p>
+    <h3>bml_dtmn</h3>
+    <hr>
+    <dl class="simple">
+      <dt style="padding-left: 250px;padding-top: 15px;font-size: 18px;font-family: 'Roboto', 'Noto', sans-serif">Módulo responsável por realizar a manipulação dos dados para realização das predições</dt><dd>
+        <dt style="padding-left: 250px;padding-top: 15px;font-size: 18px;font-family: 'Roboto', 'Noto', sans-serif"></dt><dd><p>Classe que engloba funções utilitárias de manipulação dados.
+        </p>
+        <p>Métodos públicos:
+            bdm_dfgrn, bdm_dfpar, bdm_dfsim, bdm_gdiv, bdm_ftab, bdm_gettr,
+            bdm_ids, bdm_splxy
+        </p>
+      </dd>  
+
+      <dl>
+        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+            <em ><span >class</span> </em><span ><span >bml_dtmn.</span></span><span ><span >bdm_gettr</span></span><span >(</span><em ><span ><span >bdm_vars</span></span></em>, <em ><span ><span >bdm_scale='minmax'</span></span></em>, <em ><span ><span >bdm_range(-1,1)</span></span></em></span></span></em>, <em ><span ><span >bdm_sprep=None</span></span></em></span></span></em>, <em ><span ><span >bdm_trnds=None</span></span></em>, <em ><span ><span >bdm_scale='minmax'</span></span></em></span></span></em></span></span></em><span >)</span></dt>
+              <dd><p>         Gera transformadores conforme opções.</p>
+                </dd>
+                
+          <ul>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> :param bdm_vars: Nomes das variáveis.</li>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">         :param bdm_scale: Estratégia de conversão de escala/normalização.</li>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                  :param bdm_range: Intervalo da conversão de escala.</li>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">        :param bdm_sprep: Opções especiais de pré-processamento.</li>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">             :param bdm_trnds: Partição de treinamento do dataset.            </li>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">            :return: Tupla contendo transformadores e nomes para colunas. </li>
+
+            
+          </ul>
+      <dl>
+        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+            <em ><span >class</span> </em><span ><span >bml_dtmn.</span></span><span ><span >bdm_ids</span></span><span >(</span><em ><span ><span >bdm_dsraw</span></span></em>, <em ><span ><span >bdm_cvar</span></span></em>, <em ><span ><span >select_cols=True</span></span></em></span></span></em>, <em ><span ><span >remove_bad=True</span></span></em></span></span></em>, <em ><span ><span >treat_type=True</span></span></em>, <em ><span ><span >treat_time=True</span></span></em></span></span></em></span></span></em><span >)</span></dt>
+              
+
+        <dd><p > Formata informações temporais, seleciona colunas (variáveis de
+            interesse). Opcionalmente remove linhas com valores 'Bad',
+            troca virgula por ponto e coloca as variáveis em float64.</p>
+                <ul>
+                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">              :param bdm_dsraw: DataFrame. </li>
+                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">          :param bdm_cvar: Colunas de interesse. </li>
+                        <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                     :return: Tupla contendo o DataFrame e sua descrição. </li>
+                </ul>
+                
+
+
+      </dd></dl>
+      <dl>
+        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+            <em ><span >class</span> </em><span ><span >bml_Dtmn.</span></span><span ><span >bdm_splxy</span></span><span >(</span><em ><span ><span >bdm_data</span></span></em>, <em ><span ><span >bdm_inn</span></span></em></span></span></em>, <em ><span ><span >bdm_outn</span></span></em></span></span></em><span >)</span></dt>
+              <dd><p>  Recebe um dataframe e os nomes dos inputs e output e
+                os separa o dataframe em x e y apropriados.</p>
+                </dd>
+                
+          <ul>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">         :param bdm_data: DataFrame.</li>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                :param bdm_inn: Nomes dos Inputs.</li>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                       :param bdm_outn: Nome do Output. </li>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                                :return: Tupla (x,y)</li>
+            
+            
+          </ul>
+          <dl>
+            <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                <em ><span >class</span> </em><span ><span >bml_Dtmn.</span></span><span ><span >bdm_dfpar</span></span><span >(</span><em ><span ><span >bdm_df</span></span></em>, <em ><span ><span >bdm_dsspl=(0.6,0.2,0.2)</span></span></em></span></span></em>, <em ><span ><span >bdm_type='simple'</span></span></em>, <em ><span ><span >bdm_dint=(2,100)</span></span></em></span></span></em><span >)</span></dt>
+                  <dd><p>        Particiona o DataFrame conforme o método requisitado.</p>
+                    </dd>
+                    
+              <ul>
+                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">          :param bdm_df: DataFrame.</li>
+                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">        :param bdm_dsspl: Percentuais das partições.</li>
+                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">          :param bdm_type: Estratégia de particionamento.</li>
+                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                :param bdm_dint: Intervalo de busca do melhor intervalo de divisão.</li>
+                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">           :return: Tupla contendo os DataFrames das partições.</li>
+                </ul>
+     
+                <dl>
+                    <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                        <em ><span >class</span> </em><span ><span >bml_Dtmn.</span></span><span ><span >bdm_dfsim</span></span><span >(</span><em ><span ><span >bdm_df</span></span></em>, <em ><span ><span >bdm_dsspl=(0.6,0.2,0.2)</span></span></em></span></span></em></span></span></em><span >)</span></dt>
+                          <dd><p>          Particiona o DataFrame de forma simples.</p>
+                            </dd>
+                            
+                      <ul>
+                        <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">         :param bdm_df: DataFrame.</li>
+                        <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                  :param bdm_dsspl: Percentuais das partições.</li>
+                        <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">          :return: Tupla contendo os DataFrames das partições.</li>
+                    </ul>
+                    <dl>
+                        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                            <em ><span >class</span> </em><span ><span >bml_Dtmn.</span></span><span ><span >bdm_dfgrn</span></span><span >(</span><em ><span ><span >bdm_df</span></span></em>, <em ><span ><span >bdm_dsspl=(0.6,0.2,0.2)</span></span></em></span></span></em>, <em ><span ><span >bdm_dint=(2,100)</span></span></em></span></span></em><span >)</span></dt>
+                              <dd><p>        Particiona o DataFrame de forma granular.</p>
+                                </dd>
+                                
+                          <ul>
+                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">         :param bdm_df: DataFrame.</li>
+                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                       :param bdm_dsspl: Percentuais das partições.</li>
+                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                        :param bdm_dint: Intervalo de busca do melhor intervalo de divisão.</li>
+                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                            :return: Tupla contendo os DataFrames das partições.</li>
+                            
+                            
+                          </ul>
+                          <dl>
+                            <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                                <em ><span >class</span> </em><span ><span >bml_Dtmn.</span></span><span ><span >bdm_gdiv</span></span><span >(</span><em ><span ><span >bdm_dflen</span></span></em>, <em ><span ><span >bdm_dsspl</span></span></em></span></span></em>, <em ><span ><span >bdm_dint</span></span></em></span></span></em><span >)</span></dt>
+                                  <dd><p>    Retorna o menor divisor de um número cujas divisões pelas
+                                    porcentagens passadas seja inteira dentro do intervalo.</p>
+                                    </dd>
+                                    
+                              <ul>
+                                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">          :param bdm_dflen: Número. </li>
+                                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                       :param bdm_dsspl: Percentuais das partições.</li>
+                                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                        :param bdm_dint: Intervalo de busca do melhor intervalo de divisão.</li>
+                                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                            :return: Divisor</li>
+                             </ul>
+                             <dl>
+                                <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                                    <em ><span >class</span> </em><span ><span >bml_Dtmn.</span></span><span ><span >bdm_ftab</span></span><span >(</span><em ><span ><span >bdm_df</span></span></em>, <em ><span ><span >bdm_info</span></span></em></span></span></em></span></span></em><span >)</span></dt>
+                                      <dd><p>             Formata um objeto DataFrame e sua descrição (pd.DataFrame().describe())
+                                        para apresentação, retornando ambos formatados.</p>
+                                        </dd>
+                                        
+                                  <ul>
+                                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">          :param bdm_df: DataFrame.</li>
+                                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                      :param bdm_info: DataFrame equivalente a data.describe().</li>
+                                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">         :return: Tupla "(bdm_df, bdm_info)" contendo os DataFrames devidamente formatados.</li>
+                                </ul>
+                                <dl>
+                                    <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                                        <em ><span >class</span> </em><span ><span >bml_Dtmn.</span></span><span ><span >bdm_mlsk</span></span><span >(</span><em ><span ><span >bdm_tag: str</span></span></em>, <em ><span ><span >bdm_inv: bool=False</span></span></em></span></span></em></span></span></em><span >)</span></dt>
+                                          <dd><p>     Retorna um dicionário que traduz a nomenclatura de hiperparâmetros
+                                            do pacote para a nomenclatura do scikit-learn.</p>
+                                            </dd>
+                                    <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                                                <em ><span >class</span> </em><span ><span >bml_Dtmn.</span></span><span ><span >bdm_tdict</span></span><span >(</span><em ><span ><span >bdm_mtype: str</span></span></em>, <em ><span ><span >bdm_dict: dict</span></span></em>, <em ><span ><span >bdm_inv: bool=False</span></span></em></span></span></em></span></span></em></span></span></em><span >)</span></dt>
+                                                  <dd><p>Traduz um dicionário de parâmetros.  </p>
+                                                    </dd>
+                                                    <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                                                        <em ><span >class</span> </em><span ><span >bml_Dtmn.</span></span><span ><span >bdm_fdflt</span></span><span >(</span><em ><span ><span >bdmm_f</span></span></em><span >)</span></dt>
+                                                          <dd><p>Retorna um dicionário com os valores default dos argumentos
+                                                            opcionais passados.  </p></dd>
+    </main>
+
+
+    <footer style="column-count: 2">
+
+          <ul style="padding-left: 50px">
+          <li><strong>Contato:</strong></li>
+          <li>Email: vhferreira@id.uff.br</li>
+          <li> telefone: +55 21 2629-5425</li>
+              <dt>Endereço:</dt>
+              <dd>Rua Passo da Pátria, Nº 156, Sala 335A, Bloco D
+              <br>São Domingos – Niterói – RJ
+              <br>CEP: 24210-240
+              </dd>
+          </ul>
+      </td>
+
+      <td>
+                              <img src="img/friends.png" height="200" width="200"></td>
+
+
+</footer>
+
+
+
+
+
+
+
+
+</body>
+                         <script> function myFunction() {
+var x = document.getElementById("myTopnav");
+if (x.className === "topnav") {
+x.className += " responsive";
+} else {
+x.className = "topnav";
+}
+}</script>
+</html>
+

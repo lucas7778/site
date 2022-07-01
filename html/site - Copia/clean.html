@@ -1,0 +1,154 @@
+
+            <!DOCTYPE html>
+            <html lang="pt-br">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="author" content="Lucas Silva">
+                <meta name="description" content="Projeto FPSO">
+                <meta name="keywords" content="FPSO, Machine Learning">
+                <title>clean</title>
+            
+                <link href="css.css" rel="stylesheet">
+                <link href="../java1.js" rel="script">
+            </head>
+            <body >
+            
+                        <header style="column-count: 2" >
+            
+            
+                                     <h1 style="text-align: center" > <strong>FPDA  </strong></h1>
+                                <p> Um projeto Petrobras em parceria com o FriendsLab UFF</p>
+            
+                            <img  src="img/lPetro_G.png"  alt="logo petrobras"  width="200" height="150" >
+                        </header>
+            
+            
+            
+                      <div class="topnav" id="myTopnav">
+              <a href="h.html" class="active">Home</a>
+              <a href=estado.html>Documentação </a>
+                      
+                
+                  <div class="dropdown">
+                <button class="dropbtn" style="font-size: 16px;font-family:Comic Sans MS">Back-End
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                                         <a href="modulos.html">Módulos</a>
+                                          <a href="casob.html">casos de uso</a>
+                                          <a href="dcb.html">diagrama de classe</a>
+                                          <a href="dsb.html">diagrama de sequência</a>
+                </div>
+              </div>
+              
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            
+            </div>
+            
+<main>
+    <h2>Módulo de Limpeza</h2>
+
+    <p>Este é um componente de apoio ao processo de desenvolvimento do Projeto FPDA no período
+de maio de 2021 à maio de 2023, o qual foi desenvolvido para extração de documentos de código python.</p>
+    <h3>BkdClean</h3>
+    <hr>
+    <dl class="simple">
+      <dt style="padding-left: 250px;padding-top: 15px;font-size: 18px;font-family: 'Roboto', 'Noto', sans-serif">O tratamento de dados será responsável pela limpeza e correção dos dados fornecidos.</dt><dd><p>Este módulo recebe os dados filtrados pelo módulo de leitura com base nas varáveis escolhidas e faz o tratamento
+        necessário dos dados.</p>
+      </dd>  
+      <dt style="padding-left: 250px;font-size: 18px;font-family: 'Roboto', 'Noto', sans-serif">Apresenta as seguintes classes:</dt><dd><p >BkdClean: Representação dos dados tratados</p></dd>
+
+      <dl>
+        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+            <em ><span >class</span> </em><span ><span >BkdClean.</span></span><span ><span >__init__</span></span><span >(</span><em ><span ><span >self</span></span></em>, <em ><span ><span >bkd_filt</span></span></em></span></span></em>, <em ><span ><span >bkd_dict</span></span></em><span >)</span></dt>
+              <dd> <p>Construtor da classe BkdClean</p>
+                <p> Armazena os dados filtrados e o DataFrame modificado com base no tratamento aplicado.</p>
+          <ul>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">        :param bkd_filt: dados filtrados com base nas variáveis escolhidas
+            </li>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">        :type bkd_filt: pandas.DataFrame
+            </li>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">        :param bkd_dict: dicionário contendo escolhas do usuário para preenchimento de dados faltantes
+            </li>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">        :type bkd_dict: dict
+            </li>
+          </ul>
+      <dl>
+        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+          <em ><span >class</span> </em><span ><span class="pre">BkdClean.</span></span><span ><span class=>bkd_bad</span></span><span >(</span><em ><span ><span class="pre">self</span></span></em><span class="sig-paren">)</span></dt>
+            <dd><p >Realiza a troca de dados 'Bad' por 'NaN' no DataFrame.</p>
+      </dd></dl>
+      <dl>
+        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+          <em ><span >class</span> </em><span ><span class="pre">BkdClean.</span></span><span ><span class=>bkd_float</span></span><span >(</span><em ><span ><span class="pre">self</span></span></em><span class="sig-paren">)</span></dt>
+            <dd><p >Altera o tipo de dados do DataFrame para float</p>
+      </dd></dl>
+      <dl>
+        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+          <em ><span >class</span> </em><span ><span class="pre">BkdClean.</span></span><span ><span class=>bkd_fillna</span></span><span >(</span><em ><span ><span class="pre">self</span></span></em><span class="sig-paren">)</span></dt>
+            <dd><p >Preenche dados faltantes utilizando o método escolhido pelo usuário.Caso o usuário não faça escolhas, será realizado a opção "default" na qual os registros com dados
+              faltantes serão removidos.</p>
+              <p>Os dados podem ser preenchidos utilizando as seguintes chaves:</p>
+              <ul>
+                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">        - Valor médio: "mean"
+                </li>
+                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">         - Valor máximo: "max"
+
+                </li>
+                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">        - Último valor válido: "back"
+                </li>
+                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">        - Valor válido seguinte: "forw"  
+                </li>
+              </ul>
+              
+
+      </dd></dl>
+    </main>
+
+
+    <footer style="column-count: 2">
+
+          <ul style="padding-left: 50px">
+          <li><strong>Contato:</strong></li>
+          <li>Email: vhferreira@id.uff.br</li>
+          <li> telefone: +55 21 2629-5425</li>
+              <dt>Endereço:</dt>
+              <dd>Rua Passo da Pátria, Nº 156, Sala 335A, Bloco D
+              <br>São Domingos – Niterói – RJ
+              <br>CEP: 24210-240
+              </dd>
+          </ul>
+      </td>
+
+      <td>
+                              <img src="img/friends.png" height="200" width="200"></td>
+
+
+</footer>
+
+
+
+
+
+
+
+
+</body>
+                         <script> function myFunction() {
+var x = document.getElementById("myTopnav");
+if (x.className === "topnav") {
+x.className += " responsive";
+} else {
+x.className = "topnav";
+}
+}</script>
+</html>
+
+
+
+
+
+
+
+
+

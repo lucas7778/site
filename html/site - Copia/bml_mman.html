@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>ML</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Lucas Silva">
+    <meta name="description" content="Projeto FPSO">
+    <meta name="keywords" content="FPSO, Machine Learning">
+    <link href="css.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="../site.js" rel="script">
+
+</head>
+<body >
+     <header style="column-count: 2" >
+
+
+                         <h1 style="text-align: center" > <strong>FPDA  </strong></h1>
+                    <p> Um projeto Petrobras em parceria com o FriendsLab UFF</p>
+
+                <img  src="img/lPetro_G.png"  alt="logo petrobras"  width="200" height="150" >
+
+        </header>
+
+
+
+              <div class="topnav" id="myTopnav">
+  <a href="h.html" class="active">Home</a>
+  <a href=estado.html>Documentação</a>
+       
+      <div class="dropdown">
+    <button class="dropbtn" style="font-size: 16px;font-family:Comic Sans MS">Back-End
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+                             <a href="modulos.html">Módulos</a>
+                              <a href="casob.html">casos de uso</a>
+                              <a href="dcb.html">diagrama de classe</a>
+                              <a href="dsb.html">diagrama de sequência</a>
+    </div>
+  </div>
+  
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+</div>
+
+<main>
+    <h2>Módulo de Utilitários</h2>
+
+    <p>Este é um componente de apoio ao processo de desenvolvimento do Projeto FPDA no período
+de maio de 2021 à maio de 2023, o qual foi desenvolvido para extração de documentos de código python.</p>
+    <h3>bml</h3>
+    <hr>
+    <dl class="simple">
+      <dt style="padding-left: 250px;padding-top: 15px;font-size: 18px;font-family: 'Roboto', 'Noto', sans-serif">Módulo do Machine Learning bml_mman</dt><dd>
+        <dt style="padding-left: 250px;font-size: 18px;font-family: 'Roboto', 'Noto', sans-serif">Apresenta as seguintes classes:</dt><dd><p >bmm_Dflt,bmm_MM</p></dd>
+
+        <dt style="padding-left: 250px;padding-top: 15px;font-size: 18px;font-family: 'Roboto', 'Noto', sans-serif"></dt><dd><p>  Classe bmm_MM, cuja funções principais são oferecer funcionalidades para
+            atender os casos de uso e gerenciar a criação, carregamento, serialização
+            e comparação de modelos.
+        </p>
+       
+
+      <dl>
+        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+            <em ><span >class</span> </em><span ><span >bmm_MM.</span></span><span ><span >bmm_save</span></span><span >(</span><em ><span ><span >bmm_model</span></span></em>, <em ><span ><span >bmm_path</span></span></em>, <em ><span ><span >**kwargs</span></span></em></span></span></em></span></em></span></span></em><span >)</span></dt>
+              <dd><p>  Salva o modelo no caminho especificado
+            </p>
+                </dd>
+            <dl>
+                <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                    <em ><span >class</span> </em><span ><span >bmm_MM.</span></span><span ><span >bmm_load</span></span><span >(</span><em ><span ><span >bmm_path</span></span></em>, <em ><span ><span >**kwargs</span></span></em></span></span></em></span></em></span></span></em><span >)</span></dt>
+                    <dd><p> Carrega o modelo no caminho especificado.</p>
+                            </dd>
+             <dl>
+                <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                    <em ><span >class</span> </em><span ><span >bmm_MM.</span></span><span ><span >bmm_amdls</span></span><span >(</span><em ><span ><span >**kwargs</span></span></em></span></span></em></span></em></span></span></em><span >)</span></dt>
+                     <dd><p>  Retorna uma tupla contendo os nomes dos modelos disponíveis. </p>
+                             </dd>
+                                  
+            <dl>
+                <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                    <em ><span >class</span> </em><span ><span >bmm_MM.</span></span><span ><span >bmm_getm</span></span><span >(</span><em ><span ><span >bmm_tag='Multivariate Regression' </span></span></em>, <em ><span ><span >bmm_tag=None</span></span></em>, <em ><span ><span >bmm_inn=None</span></span></em></span></span></em>, <em ><span ><span >bdmm_outn=None</span></span></em></span></span></em>, <em ><span ><span >bmm_build=None</span></span></em>, <em ><span ><span >bmm_pdata=None</span></span></em></span></span></em></span></span></em></em>, <em ><span ><span >bmm_fit=None</span></span></em></em>, <em ><span ><span >**kwargs</span></span></em><span >)</span></dt>
+                    <dd><p>   Retorna o modelo especificado a partir da tag passada. Caso bmm_build
+                        seja igual a True e as variáveis bmm_pdata e bmm_fit não sejam  passadas, acusará erro.</p>
+                                        </dd>
+                                        
+                     <ul>
+                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">         :param bmm_tag: Tag referente ao modelo desejado.</li>
+                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">          :param bmm_name: Nome do modelo a ser criado.</li>
+                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">          :param bmm_inn: Tupla contendo o nome das variáveis de entrada. </li>
+                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                :param bmm_outn: Tupla contendo o nome da variável de saída.</li>
+                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">               :param bmm_build: True se o modelo já deve ser preparado para uso. </li>
+                     <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">         :param bmm_pdata: Dicionário contendo as entradas do método bbb_pdata.</li>
+                     <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                 :param bmm_fit: Dicionário contendo as entradas do método bm_fit.</li>
+                     <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                   :return: Modelo.</li>
+
+                    </ul>   
+                    <dl>
+                        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                            <em ><span >class</span> </em><span ><span >bmm_MM.</span></span><span ><span >bmm_comp</span></span><span >(</span><em ><span ><span >bmm_list</span></span></em>, <em ><span ><span >bmm_metrc='r2'</span></span></em></span></span></em>, <em ><span ><span >bmm_stat='50%'</span></span></em>, <em ><span ><span >**kwargs</span></span></em></span></span></em><span >)</span></dt>
+                              <dd><p> A partir de uma lista de modelos passada, retorna o melhor segundo a
+                                métrica escolhida.</p>
+                                </dd>
+                                
+                          <ul>
+                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">        :param bmm_list: Lista contendo os modelos a serem comparados.</li>
+                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">        :param bmm_metrc: Métrica escolhida.</li>
+                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">  :param bmm_stat: Estatística a respeito da métrica (não utilizado se bmm_metrc == 'r2').</li>
+                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">         :return: Modelo escolhido. </li>
+                            
+                            
+                          </ul> 
+                          <dl>
+                            <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                                <em ><span >class</span> </em><span ><span >bmm_MM.</span></span><span ><span >bmm_compt</span></span><span >(</span><em ><span ><span >bmm_list</span></span></em>, <em ><span ><span >bmm_metrc='r2'</span></span></em>, <em ><span ><span >**kwargs</span></span></em></span></span></em></span></span></em><span >)</span></dt>
+                                  <dd><p> Retorna um DataFrame apresentado a métrica escolhida para cada modelo
+                                    da lista passada.</p>
+                                    </dd>
+                                    
+                              <ul>
+                                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">        :param bmm_list: Lista contendo os modelos a serem comparados.</li>
+                                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">               :param bmm_metrc: Métrica escolhida. </li>
+                                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">  :return: DataFrame.</li>
+                            </ul>
+                            <dl>
+                              <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                                <em ><span >class</span> </em><span ><span >bmm_MM.</span></span><span ><span >bmm_auto</span></span><span >(</span><em ><span ><span >bmm_inn=None</span></span></em>, <em ><span ><span >bmm_outn=None</span></span></em>,<em ><span ><span >bmm_avail=()</span></span></em>, <em ><span ><span >bmm_dsraw=None</span></span></em>, <em ><span ><span >bmm_setup=None</span></span></em>, <em ><span ><span >bmm_score='r2'</span></span></em>, <em ><span ><span >bmm_grids=None</span></span></em>, <em ><span ><span >bmm_metrc='r2'</span></span></em>, <em ><span ><span >bmm_stat='50%'</span></span></em>, <em ><span ><span >bmm_name=''</span></span></em>,<em ><span ><span >**kwargs</span></span></em></span></span></em></span></span></em><span >)</span></dt>
+                                  <dd><p> Aplica a funcionalidade de Grid Search a diversos modelos e retorna o
+                                    melhor.</p>
+                                    </dd>
+                               
+                                                        
+                                     <ul>
+                                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">:param bmm_inn: Tupla contendo os inputs.</li>
+                                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">         :param bmm_outn: Tupla contendo o output.</li>
+                                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">               :param bmm_avail: Tupla contendo tags dos modelos a serem testados.Caso seja igual a "all", todos os modelos disponíveis serão testados</li>
+                                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">          :param bmm_dsraw: DataFrame referente a base de dados.</li>
+                                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">          :param bmm_setup: Dicionário contendo o setup de pré-processamento. </li>
+                                     <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">   :param bmm_metrc: Métrica utilizada para comparar os modelos.  </li>
+                                     <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">            :param bmm_grids: </li>
+                                     <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">            :return: Tupla contendo</li>
+                
+                                    </ul> 
+                                    <dl>
+                                        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                                            <em ><span >class</span> </em><span ><span >bmm_Dflt.</span></span><span ><span >bdm_compt</span></span><span >(</span><em ><span ><span >bmm_f</span></span></em>, <em ><span ><span >bmm_obj=None</span></span></em>, <em ><span ><span >**kwargs</span></span></em></span></span></em></span></span></em><span >)</span></dt>
+                                              <dd><p>         Retorna um dicionário com os valores default do método. </p>
+                                                </dd>
+                                                
+                                          <ul>
+                                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">         :param bmm_f: Método</li>
+                                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">              :param bmm_obj: Objeto sobre o qual se chama o método.</li>
+                                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">          :return: Dicionário com os parâmetros default do método.</li>
+                                        </ul> 
+                                        <dl>
+                                            <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                                                <em ><span >class</span> </em><span ><span >bmm_Dflt.</span></span><span ><span >__bmm_gobja</span></span><span >(</span><em ><span ><span >bmm_obj</span></span></em><span >)</span></dt>
+                                                  <dd><p>          Retorna o valores default pré-processados dos métodos do objeto.
+                                                    (uso interno) </p>
+                                                    </dd>
+                                                  </main>
+                                                    <footer style="column-count: 2">
+
+                                                     <ul style="padding-left: 50px">
+                                                      <li><strong>Contato:</strong></li>
+                                                      <li>Email: vhferreira@id.uff.br</li>
+                                                      <li> telefone: +55 21 2629-5425</li>
+                                                          <dt>Endereço:</dt>
+                                                          <dd>Rua Passo da Pátria, Nº 156, Sala 335A, Bloco D
+                                                          <br>São Domingos – Niterói – RJ
+                                                          <br>CEP: 24210-240
+                                                          </dd>
+                                                      </ul>
+                                                  </td>
+                                            
+                                                  <td>
+                                                                          <img src="img/friends.png" height="200" width="200"></td>
+                                            
+                                            
+                                            </footer>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            </body>
+                                                                     <script> function myFunction() {
+                                            var x = document.getElementById("myTopnav");
+                                            if (x.className === "topnav") {
+                                            x.className += " responsive";
+                                            } else {
+                                            x.className = "topnav";
+                                            }
+                                            }</script>
+                                            </html>                                
+                            
+                
+          
+  
+
+
+
+                                            
+
+
+
+
+
+
+
+
+

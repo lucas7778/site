@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Jenkis</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Lucas Silva">
+    <meta name="description" content="Projeto FPSO">
+    <meta name="keywords" content="FPSO, Machine Learning">
+    <link href="css.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="../site.js" rel="script">
+
+</head>
+<body >
+     <header style="column-count: 2" >
+
+
+                         <h1 style="text-align: center" > <strong>FPDA  </strong></h1>
+                    <p> Um projeto Petrobras em parceria com o FriendsLab UFF</p>
+
+                <img  src="img/lPetro_G.png"  alt="logo petrobras"  width="200" height="150" >
+
+        </header>
+
+
+
+              <div class="topnav" id="myTopnav">
+  <a href="h.html" class="active">Home</a>
+  <a href=estado.html>Documentação </a>
+            
+  <div class="dropdown">
+    <button class="dropbtn" style="font-size: 16px;font-family:Comic Sans MS">Back-End
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+                             <a href="modulos.html">Módulos</a>
+                              <a href="casob.html">casos de uso</a>
+                              <a href="dcb.html">diagrama de classe</a>
+                              <a href="dsb.html">diagrama de sequência</a>
+    </div>
+  </div>
+    
+    <div class="dropdown-content">
+                             <a href="Módulos.html">Módulos</a>
+                              <a href="casob.html">casos de uso</a>
+                              <a href="dcb.html">diagrama de classe</a>
+                              <a href="dsb.html">diagrama de sequência</a>
+    </div>
+  </div>
+  
+
+<main>
+    <h2>Módulo de Outliers</h2>
+
+    <p>Este é um componente de apoio ao processo de desenvolvimento do Projeto FPDA no período
+de maio de 2021 à maio de 2023, o qual foi desenvolvido para extração de documentos de código python.</p>
+    <h3>BkdOutlier</h3>
+    <hr>
+    <dl class="simple">
+      <dt style="padding-left: 250px;padding-top: 15px;font-size: 18px;font-family: 'Roboto', 'Noto', sans-serif">BkdOutlier será responsável pela detecção e tratamento dos outliers.</dt><dd><p>
+        Este módulo recebe um DataFrame com as variáveis selecionadas pelo usuário, já tratado, e realiza a detecção e
+        realiza a detecção e tratamento dos outliers existentes</p>
+      </dd>  
+      <dt style="padding-left: 250px;font-size: 18px;font-family: 'Roboto', 'Noto', sans-serif">Apresenta as seguintes classes:</dt><dd><p >BkdOutlier,
+        BkdKNN,
+        BkdAvgKNN,
+        BkdMedKNN,
+        BkdLOF,
+        BkdIForest.</p></dd>
+
+      <dl>
+        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+            <em ><span >class</span> </em><span ><span >BkdOutlier.</span></span><span ><span >__init__</span></span><span >(</span><em ><span ><span >self</span></span></em>, <em ><span ><span >bkd_dados</span></span></em></span></span></em>, <em ><span ><span >bkd_model='None'</span></span></em><span >)</span></dt>
+              <dd> <p>Classe pai dos métodos disponíveis para detecção e tratamento de outliers</p>
+                <p> Construtor da classe BkdOutlier.</p>
+          <ul>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                :param bkd_dados: Dados contendo outliers a serem removidos
+
+            </li>
+            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">               :type bkd_dados: pandas.DataFrame
+
+            </li>
+          
+          </ul>
+      <dl>
+        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+          <em ><span >class</span> </em><span ><span class="pre">BkdOutlier.</span></span><span ><span class=>bkd_model</span></span><span >(</span><em ><span ><span >self</span></span></em>, <em ><span ><span >model</span></span></em><span >)</span></dt>
+            <dd><p > Possibilita acesso ao atributo bkd_model. Este atributo indicará na classe filha
+                o algoritmo de detecção de outlier utilizado.</p>
+                <ul>
+                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                 :return: valor contido em bkd_model
+
+        
+                    </li>
+                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                   :rtype: object
+
+        
+                    </li>
+                  
+                  </ul>
+      </dd></dl>
+      <dl>
+        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+          <em ><span >class</span> </em><span ><span class="pre">BkdOutlier.</span></span><span ><span class=>bkd_fit</span></span><span >(</span><em ><span ><span class="pre">self</span></span></em><span class="sig-paren">)</span></dt>
+            <dd><p >        Realiza o fit do método de tratamento de outlier escolhido.
+            </p>
+      </dd></dl>
+      <dl>
+        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+          <em ><span >class</span> </em><span ><span class="pre">BkdOutlier.</span></span><span ><span class=>bkd_predict</span></span><span >(</span><em ><span ><span class="pre">self</span></span></em><span class="sig-paren">)</span></dt>
+            <dd><p >        Realiza a classificação de quais dados são outliers com base no método para tratamento de outlier escolhido.
+            </p>
+              </dd></dl>
+        <dl>
+                <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                  <em ><span >class</span> </em><span ><span class="pre">BkdOutlier.</span></span><span ><span class=>bkd_remove</span></span><span >(</span><em ><span ><span class="pre">self</span></span></em><span class="sig-paren">)</span></dt>
+                    <dd><p >                Remove da base os registros classificados como outliers pelo método bkd_predict.
+
+                    </p>
+                      </dd></dl>
+                      <dl>
+                        <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                            <em ><span >class</span> </em><span ><span >BkdKNN.</span></span><span ><span >__init__</span></span><span >(</span><em ><span ><span >self</span></span></em>, <em ><span ><span >bkd_dados</span></span></em></span></span></em>, <em ><span ><span >bkd_model='None'</span></span></em><span >)</span></dt>
+                              <dd> <p>    Classe representativa do método k-Nearest Neighbors para remoção de outliers
+                              </p>
+                                <p> Construtor da classe BkdKNN.</p>
+                          <ul>
+                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                        :param bkd_dados: Dados contendo outliers a serem tratados, neste caso Average k-Nearest Neighbors.
+
+                
+                            </li>
+                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                       :type bkd_dados: DataFrame
+
+                
+                            </li>
+                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                :param bkd_model: Método escolhido para remoção de outliers
+                
+                            </li>
+                            <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                       :type bkd_model: object
+
+                
+                            </li>
+                          
+                          </ul>
+                        </dd></dl>
+                        
+                        <dl>
+                          <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                              <em ><span >class</span> </em><span ><span >BkdAvgKNN.</span></span><span ><span >__init__</span></span><span >(</span><em ><span ><span >self</span></span></em>, <em ><span ><span >bkd_dados</span></span></em></span></span></em>, <em ><span ><span >bkd_model='None'</span></span></em><span >)</span></dt>
+                                <dd> <p>        Classe representativa do método Average k-Nearest Neighbors para remoção de outliers
+
+                                </p>
+                                  <p> Construtor da classe BkdAvgKNN.</p>
+                            <ul>
+                              <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                        :param bkd_dados: Dados contendo outliers a serem tratados, neste caso Average k-Nearest Neighbors.
+  
+                  
+                              </li>
+                              <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                       :type bkd_dados: DataFrame
+  
+                  
+                              </li>
+                              <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                :param bkd_model: Método escolhido para remoção de outliers
+                  
+                              </li>
+                              <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                       :type bkd_model: object
+  
+                  
+                              </li>
+                            
+                            </ul>
+                          </dd></dl>
+                          <dl>
+                            <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                                <em ><span >class</span> </em><span ><span >BkdMedKNN.</span></span><span ><span >__init__</span></span><span >(</span><em ><span ><span >self</span></span></em>, <em ><span ><span >bkd_dados</span></span></em></span></span></em>, <em ><span ><span >bkd_model='None'</span></span></em><span >)</span></dt>
+                                  <dd> <p>            Classe representativa do método Median k-Nearest Neighbors para remoção de outliers
+
+  
+                                  </p>
+                                    <p> Construtor da classe BkdMedKNN.</p>
+                              <ul>
+                                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                        :param bkd_dados: Dados contendo outliers a serem tratados, neste caso Average k-Nearest Neighbors.
+    
+                    
+                                </li>
+                                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                       :type bkd_dados: DataFrame
+    
+                    
+                                </li>
+                                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                :param bkd_model: Método escolhido para remoção de outliers
+                    
+                                </li>
+                                <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                       :type bkd_model: object
+    
+                    
+                                </li>
+                              
+                              </ul>
+                            </dd></dl>
+                            <dl>
+                              <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                                  <em ><span >class</span> </em><span ><span >BkdLOF.</span></span><span ><span >__init__</span></span><span >(</span><em ><span ><span >self</span></span></em>, <em ><span ><span >bkd_dados</span></span></em></span></span></em>, <em ><span ><span >bkd_model='None'</span></span></em><span >)</span></dt>
+                                    <dd> <p>                Classe representativa do método Local Outlier Factor para remoção de outliers</p>
+                                      <p> Construtor da classe BkdLOF.</p>
+                                <ul>
+                                  <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                        :param bkd_dados: Dados contendo outliers a serem tratados, neste caso Average k-Nearest Neighbors.
+      
+                      
+                                  </li>
+                                  <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                       :type bkd_dados: DataFrame
+      
+                      
+                                  </li>
+                                  <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                :param bkd_model: Método escolhido para remoção de outliers
+                      
+                                  </li>
+                                  <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                       :type bkd_model: object
+      
+                      
+                                  </li>
+                                
+                                </ul>
+                              </dd></dl>
+                              <dl>
+                                <dt  style="padding-left: 0px;padding-top: 15px;padding-bottom: 15px;font-size: 20px;font-family: 'Roboto', 'Noto', sans-serif;    background-image:linear-gradient(to right,orange,orange);margin-left:250px;margin-top: 10px;margin-bottom:10px;">
+                                    <em ><span >class</span> </em><span ><span >BkdIForest.</span></span><span ><span >__init__</span></span><span >(</span><em ><span ><span >self</span></span></em>, <em ><span ><span >bkd_dados</span></span></em></span></span></em>, <em ><span ><span >bkd_model='None'</span></span></em><span >)</span></dt>
+                                      <dd> <p>                  Classe representativa do método Isolation Forest para remoção de outliers.
+                                      </p>
+                                        <p> Construtor da classe BkdIForest.</p>
+                                  <ul>
+                                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                        :param bkd_dados: Dados contendo outliers a serem tratados, neste caso Average k-Nearest Neighbors.
+        
+                        
+                                    </li>
+                                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                       :type bkd_dados: DataFrame
+        
+                        
+                                    </li>
+                                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                :param bkd_model: Método escolhido para remoção de outliers
+                        
+                                    </li>
+                                    <li style="font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">                       :type bkd_model: object
+        
+                        
+                                    </li>
+                                  
+                                  </ul>
+                                </dd></dl>
+
+
+
+
+    </main>
+
+
+    <footer style="column-count: 2">
+
+          <ul style="padding-left: 50px">
+          <li><strong>Contato:</strong></li>
+          <li>Email: vhferreira@id.uff.br</li>
+          <li> telefone: +55 21 2629-5425</li>
+              <dt>Endereço:</dt>
+              <dd>Rua Passo da Pátria, Nº 156, Sala 335A, Bloco D
+              <br>São Domingos – Niterói – RJ
+              <br>CEP: 24210-240
+              </dd>
+          </ul>
+      </td>
+
+      <td>
+                              <img src="img/friends.png" height="200" width="200"></td>
+
+
+</footer>
+
+
+
+
+
+
+
+
+</body>
+                         <script> function myFunction() {
+var x = document.getElementById("myTopnav");
+if (x.className === "topnav") {
+x.className += " responsive";
+} else {
+x.className = "topnav";
+}
+}</script>
+</html>

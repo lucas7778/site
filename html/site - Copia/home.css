@@ -1,0 +1,246 @@
+header {
+    text-align: CENTER;
+
+
+    background-color: ghostwhite;
+    width: 100%;
+}
+
+
+
+ header p{
+    font-size: 18px;
+    font-family: "Roboto Light";
+
+}
+header   h1 {
+    font-family: Impact;
+    color: #a5632a;
+    text-align: center;
+    padding-top: 50px;
+}
+header  img {
+    margin-right: 250px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+footer {
+
+     background-color: silver;
+    height: 100%;
+ }
+footer ul{
+    padding-top: 50px;
+    list-style-type: none;
+    text-align: center;
+    font-size: 13px;
+    font-family: Roboto, sans-serif;
+}
+*{
+    margin: 0px;
+}
+main article{
+    font-size: 18px;
+    padding: 10px;
+    text-align:justify ;
+
+    font-family: Roboto, sans-serif;
+    margin-right: 20px;
+    margin-left: 35px;
+
+}
+main img{ padding-left: 25px;
+padding-top: 10px}
+main h3{
+    font-size: 30px;
+    padding: 20px;
+    padding-left: 30px;
+    background-image:linear-gradient(to right,orange,orange);
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+
+main img{
+    max-width: 100%;
+    margin-left: 35px;
+}
+
+ .table {
+  width: 75%;
+  border-collapse: collapse;
+  margin-left: 120px;
+  border-top:none;
+  margin-right: 80px;
+  margin-top: 10px;
+     padding-bottom: 25px;
+     margin-bottom: 25px;
+     padding-left: 150px;
+
+}
+
+ .table th, td {
+  text-align: left ;
+  padding: 8px;
+   font-family: Noto;
+    font-size: 16px;
+}
+.table th{
+    background-color: #73C2FB;
+
+
+}
+.table td{ border-bottom: 1px solid lightgray;
+}
+
+.table  tr:nth-child(even){background-color: #f2f2f2}
+ .table a {
+     text-decoration: none;
+     color: blue;
+ }
+main ul{
+    font-size: 18px;
+    padding: 10px;
+    text-align:justify ;
+   margin-left: 35px;
+    list-style: none;
+    margin-right: 20px;
+    }
+main ul li{
+    padding-bottom: 10px;
+    font-family: "Lucinda Grande", "Lucinda Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+}
+main ul li a{
+    text-decoration: none;
+    color: blue;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: darkblue;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Comic Sans MS";
+}
+
+
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;
+  font-family: "Comic Sans MS";
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: darkblue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
